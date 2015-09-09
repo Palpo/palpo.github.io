@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>More REST</title>
+
+    <meta name="description" content="APIs">
+    <meta name="author" content="Lassi Haaranen">
+    <meta name="author" content="Petri Ihantola">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+    <link rel="stylesheet" href="../lib/reveal.js-2.6.2/css/reveal.min.css">
+    <link rel="stylesheet" href="../lib/reveal.js-2.6.2/css/theme/moon.css" id="theme">
+
+    <link rel="stylesheet" href="../lib/highlight/styles/monokai_sublime.css">
+
+    <link rel="stylesheet" href="../css/custom.css">
+    <style>
+      body {
+        background: #002b36;
+        background-color: #002b36;
+      }
+    </style>
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'lib/reveal.js-2.6.2/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <div class="reveal">
+      <div class="slides">
+
+
+      <section class="general_topic">
+        <h2>MORE REST</h2>
+        <p><small>Petri Ihantola</small></p>
+        <p><small><a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</a></small></p>
+      </section>
+
+      <section>
+        <h2>Trends?</h2>
+      </section>
+
+      <section>
+        <h2>XML vs. JSON</h2>
+<img src="morerest/trends2.png">
+      </section>
+
+      <section>
+        <h2>Rest vs SOA etc.</h2>
+<img src="morerest/trends1.png">
+      </section>
+
+      <section>
+        <h2>However</h2>
+           <p>Your customers, their environment, etc. <br>
+              vs. global trends.</p>
+      </section>
+
+
+      <section>
+        <h2>Rest best practices</h2>
+        <p><small>continues from yesterday</small></p>
+        <p>Resources are nouns, use plurals only to keep it simple.<br></p>
+        <code>/books/</code><br>
+        <code style="text-decoration: line-through;">/book/42</code><br>
+        <code>/books/42</code>
+        
+      </section>
+
+      <section>
+        <h2>Rest best practices (continues from yesterday)</h2>
+       <table >
+<tr>
+<td> </td>
+<td>GET</td>
+<td>POST</td>
+<td>PUT</td>
+<td>DELETE</td>
+</tr>
+<tr>
+<td>/books</td>
+<td>???</td>
+<td>???</td>
+<td>???</td>
+<td>???</td>
+</tr>
+<tr>
+<td>/books/42</td>
+<td>???</td>
+<td>???</td>
+<td>???</td>
+<td>???</td>
+</tr>
+</table>
+</section>
+
+
+
+      <section>
+        <h2>Rest best practices</h2>
+
+       <table >
+<tr>
+<td> </td>
+<td>GET<br>
+read</td>
+<td>POST<br>
+create</td>
+<td>PUT<br>
+update</td>
+<td>DELETE</td>
+</tr>
+<tr>
+<td>/books</td>
+<td>Returns a list of books</td>
+<td>Create a new book</td>
+<td>Bulk update of books</td>
+<td>Delete all books!</td>
+</tr>
+<tr>
+<td>/books/42</td>
+<td>Returns a specific book</td>
+<td>Method not allowed (405)</td>
+<td>Updates a specific book</td>
+<td>Deletes a specific book</td>
+</tr>
+</table>
+      </section>
+
+      <section>
+        <h2>HTTP Return codes</h2>
+        <p>See, e.g., <a href="http://www.restapitutorial.com/httpstatuscodes.html">http://www.restapitutorial.com/httpstatuscodes.html</a></p>
+      </section>
+
+      <section>
+        <h2>Rest best practices</h2>
+        <p>You can use sub-resources for relations</p>
+        <pre><code>
+        GET /books/42/authors/
+        GET /authors/
+        </code></pre>
+      </section>
+
+      <section>
+        <h2>Rest best practices</h2>
+        <p>HTTP headers communicating serialization format</p>
+        <ul><li>Content-Type defines the request format.
+            <li>Accept defines a list of acceptable response formats.
+        </ul>
+      </section>
+
+        <section>
+        <h2>Rest best practices</h2>
+        <p>Authentication and authorization are different. Remember to do both.</p>
+      </section>
+
+      <section>
+      <p>There are many other good practices related to designing REST APIs. Some bad practices are also listed, e.g., <a href="https://jacobian.org/writing/rest-worst-practices/">https://jacobian.org/writing/rest-worst-practices/</a></p>
+      </section>
+
+      <section>
+        <h2>Is there anything like WSDL but for REST</h2>
+        <p>Or do I need such?</p>
+      </section>
+
+      <section>
+        <h2>Web Application Description Language (WADL)</h2>
+        <ul>
+          <li>An XML-based language
+          <li>Assumes HTTP
+          <li>Uses hyperlinks for linking resources
+          <li>Development both language and platform neutral
+          <li>Aligned with REST terminology
+        </ul>
+      </section>
+
+      <section>
+        <h2>WADL elements</h2>
+        <ul><li>Set of resources: Analogous to a site map showing the resources on offer.
+            <li>Relationships between resources: 
+            Describing the links between resources, both referential and causal.
+            <li>Methods that can be applied to each resource: The HTTP methods that can be applied to each resource, the expected inputs and outputs and their supported formats.
+            <li>Resource representation formats: The supported MIME types and data schemas in use
+        </ul>
+      </section>
+
+      <section>
+        <h2>WADL in Real</h2>
+
+        <p>Yahoo has a nice demo: <a href="https://developer.yahoo.com/blogs/ydn/check-wadl-7130.html">https://developer.yahoo.com/blogs/ydn/check-wadl-7130.html</a> 
+      </section>
+
+      <section>
+        <h2>WADL example</h2>
+        <pre><code>
+&lt;application xmlns="http://wadl.dev.java.net/2009/02" 
+       xmlns:ns="http://superbooks"&gt;
+ &lt;grammars&gt;
+   ...
+ &lt;/grammars&gt;
+ &lt;resources base="http://localhost:8080/"&gt;
+   ...
+   &lt;resource path="/books"&gt;
+      &lt;resource path="/bookstore/{id}"&gt;
+        &lt;param name="id" style="template"/&gt;
+        &lt;method name="GET"&gt;
+          &lt;response&gt;
+           &lt;representation mediaType="application/xml" element="ns:thebook"/&gt;
+          &lt;/response&gt;
+        &lt;/method&gt;
+      &lt;/resource&gt;
+   &lt;/resource&gt;
+ &lt;/resources&gt;  
+&lt;/application&gt;
+        </code></pre>
+      </section>
+
+     <section>
+     <h2>...WADL example</h2>
+     <pre><code>
+&lt;grammars&gt;
+  &lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+        xmlns:tns="http://superbooks" attributeFormDefault="unqualified" elementFormDefault="unqualified" 
+        targetNamespace="http://superbooks"&gt;
+    &lt;xs:element name="thebook" type="tns:book"/&gt;
+    &lt;xs:complexType name="book"&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:element minOccurs="0" ref="tns:thechapter"/&gt;
+            &lt;xs:element name="id" type="xs:int"/&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+  &lt;/xs:schema&gt;
+ &lt;/grammars&gt;
+     </code></pre>
+     </section>
+
+     <section>
+       <h2>WADL Tools Support etc</h2>
+       <ul><li>GlassFish – Sun Java EE 7 Application Server: https://glassfish.java.net/
+Support for RESTful Web Services and automatic generation of WADL files from Java code
+WADL2JAVA https://wadl.java.net/wadl2java.html
+           <li>Web Application Description Language (WADL) spec., W3C
+http://www.w3.org/Submission/wadl/
+       </ul>
+       <p>However, WADL is still not widely adopted.</p>
+     </section>
+
+     <section>
+       <h2></h2>
+     </section>
+  
+      <section>
+        <h2>Thank you</h2>
+      </section>
+
+
+
+
+
+
+      </div>
+    </div>
+    <!--script src="lib/jquery-1.11.1.min.js"></script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="../lib/reveal.js-2.6.2/lib/js/head.min.js"></script>
+    <script src="../lib/reveal.js-2.6.2/js/reveal.min.js"></script>
+    <script src="../js/custom.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        fragments: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../lib/reveal.js-2.6.2/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../lib/reveal.js-2.6.2/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../lib/reveal.js-2.6.2/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../lib//highlight/highlight.pack.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../lib/reveal.js-2.6.2/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '../lib/reveal.js-2.6.2/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+
+  </body>
+</html>
