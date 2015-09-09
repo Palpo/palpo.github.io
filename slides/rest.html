@@ -226,7 +226,12 @@
         <p>POST is not <em>idempotent</em>, so it can be used for partial updates.</p>
       </section>
 
+      <section>
+        <h2>Browsers do support PUT and DELETE - HTML doesn't.</h2>
 
+        <p>PUT and DELETE request can be initiated via Javascript (AJAX), but not via HTML form submission.</p>
+
+      </section>
 
       <section>
         <h2>Uniform Interface Principles</h2>
@@ -243,7 +248,20 @@
         <h2>HATEOAS</h2>
         <p>Hypertext As The Engine Of Application State (<code>HATEOAS</code>).</p>
         <blockquote>"Clients make state transitions only through actions that are dynamically identified within hypermedia by the server (e.g., by hyperlinks within hypertext). Except for simple fixed entry points to the application, a <em>client does not assume that any particular action is available for any particular resources beyond those described in representations previously received from the server</em>." <a href="http://en.wikipedia.org/wiki/Representational_state_transfer#Uniform_interface">Wikipedia - REST</a> (emphasis mine)</blockquote>
+        <p>Still not widely used</p>
         
+      </section>
+
+      <section>
+        <h2>HATEOAS Challenges</h2>
+
+        <p>There is no standard  way for describing the relationships of resources in RESTful interfaces.
+Couple of proposals:<p>
+<ul><li>HAL specification
+http://stateless.co/hal_specification.html</li>
+<li>JSON API http://jsonapi.org/</li>
+</ul>
+
       </section>
 
       <section>
@@ -277,6 +295,21 @@
   ]
 }</code></pre>
       </section>
+
+<section>
+<h2>REST service composition</h2>
+<p>REST services can also invoke other (REST) services.</p>
+<ul>
+<li>The idempotence and safeness must be maintained, i.e., an idemponent (safe) request should not cause a non-idemponent (non-safe) request to subservice</li>
+</ul>
+<p>The stateless constraint somewhat limits service composition (creating task services)</p>
+<ul>
+<li>Model a long-running task as a resource <br> POST /pizzaOrder instead of POST /pizza </li>
+<li>Or POST /pizza and return 202 In progress (STATE?)</li>
+</ul>
+
+
+</section>
 
       <section>
         <h2>REST Many-to-Many</h2>
@@ -342,10 +375,16 @@
 
       </section>
 
-
       <section>
-        <h2>Comparison of WS-* and REST</h2>
+        <h2>Some challenges of REST</h2>
+        <ul><li>Transactions <br>
+             Manipulating multiple resources; commit iff all successful</li>
+            <li>Asynchronous tasks and batch processing</li>
+            <li>Links between resources</li>
+        </ul>
       </section>
+
+
 
       <section>
         <h2>Thank you</h2>
