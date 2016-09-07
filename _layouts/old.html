@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+        {% if site.description %}<meta name="description" content="{{ site.description }}">{% endif %}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/timeline.css">
+    </head>
+
+
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!-- Docs master nav -->
+
+      <header class="navbar navbar-default navbar-static-top" role="banner">
+        <div class="container">
+          <div class="navbar-header">
+              <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="/" class="navbar-brand">TIE-23600 Palvelupohjaiset järjestelmät</a>
+          </div>
+          <nav class="collapse navbar-collapse" role="navigation">
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a href="#course">Kurssin suorittaminen</a>
+                </li>
+                <li>
+                  <a href="#slides">Luennot</a>
+                </li>
+                <li>
+                  <a href="#results">Harjoitukset</a>
+                </li>
+                <li>
+                  <a href="./index.html">Kurssi nyt</a>
+                </li>
+              </ul>
+          </nav>
+        </div>
+      </header>
+
+
+
+      <div class="container">
+
+        <div class="alert alert-danger">
+          <strong>Varoitus!</strong> Nämä ovat jo päättyneen vanhan suorituskerran kotisivut
+        </div>
+
+        <div class="jumbotron">
+          <h1>Palvelupohjaiset järjestelmät</h1>
+          <p>Kurssi käsittelee palvelupohjaisia järjestelmiä ja niiden arkkitehtuuria. Kurssilla perehdytään Web-palveluihin ja palveluorkestraatioihin, sekä käsitellään ReST-arkkitehtuuria ja pilvilaskentaa. Harjoitustöissä tutustutaan Web-palvelu- ja pilvilaskentapalvelujärjestelmien toteutustekniikoihin.
+          </p>
+        </div>
+
+        {{ page.content }}
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </body>
+</html>
