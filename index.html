@@ -7,12 +7,55 @@ layout: default
     <h2>Kurssijärjestelyt</h2>
     <a name="course"></a>
 
-    <p>Kurssilla on kaksi pakollista osasuoritusta: tentti ja (pareittain) tehtävä harjoitustyö toisella periodilla. Lisäksi ensimmäisellä periodilla on henkilökohtaisia pienempiä tehtäviä (alkaen 12.9.), jotka vaikuttavat kurssin kokonaisarvosanaan positiivisesti. Kaikkien osasuoritusten on liityttävä samaan suorituskertaan - eli vanhoja tenttejä tai harjoituksia ei voi yhdistää osaksi vuoden 2016 kurssia. Luennot ovat ensimmäisellä periodilla keskiviikkoisin klo 14-16.
+    <p>Kurssilla on kaksi pakollista osasuoritusta: tentti ja kaksi (pareittain) tehtävää harjoitustyötä toisella periodilla. Harjoitustöistä toisen suorittaminen riittää kurssin läpäisemiseksi. Lisäksi ensimmäisellä periodilla on henkilökohtaisia pienempiä tehtäviä (alkaen 12.9.), jotka vaikuttavat kurssin kokonaisarvosanaan positiivisesti. Kaikkien osasuoritusten on liityttävä samaan suorituskertaan - eli vanhoja tenttejä tai harjoituksia ei voi yhdistää osaksi vuoden 2016 kurssia. Luennot ovat ensimmäisellä periodilla keskiviikkoisin klo 14-16.
 
-    <p>Kurssin arvostellaan siten, että toisen periodin harjoitustyön painoarvo on 50%, tentin 40%, yksilöllisten ensimmäisen periodin harjoitusten 10%</p>
+    <p>Kurssin arvostellaan siten, että toisen periodin harjoitustöiden painoarvo on 50% (molemmat 25%), tentin 40%, yksilöllisten ensimmäisen periodin harjoitusten 10%</p>
 
-    <p>Kurssin vastuuopettajana toimii Petri Ihantola. Kurssin tiedotus tapahtuu näiden kotisivujen kautta. Lisäksi kurssilla on epävirallinen slack -ryhmä <a href="https://palpo.slack.com/x-77028117026-77011368902/signup">palpo.slack.com</a>, jossa opiskelijat voivat keskustella vapaasti. Kurssihenkilökunta ei kuitenkaan päivystä kanavalla.</p>
+    <p>Kurssin vastuuopettajana toimii Petri Ihantola. Kurssin tiedotus tapahtuu näiden kotisivujen kautta. Lisäksi kurssilla on epävirallinen slack -ryhmä <a href="https://palpo.slack.com/x-77028117026-77011368902/signup">palpo.slack.com</a>, jossa opiskelijat voivat keskustella vapaasti. Kurssihenkilökunta ei kuitenkaan päivystä kanavalla. Kurssin assistenttina toimii Mikko Nurminen.</p>
 
+    <h3>Harjoitustyöt</h3>
+
+    <h4>Oman REST-rajapinnan suunnittelu</h4>
+
+    <p>Oma aihe, jossa suunnittellaan palvelu, joka yhdistelee avointa dataa useammasta, kuin yhdestä julkisesta rajapinnasta, ja tarjoaa tietolähteitä yhdistelemällä tuotettuun dataan oman rajapintanta ja (yksinkertaisen) rajapintaa hyödyntävän esimerkkisovelluksen. Esimerkkejä avoimista rajapinnoista löytyy esim. <a href="http://apisuomi.fi/shop/">api-suomesta</a> ja <a href="http://www.programmableweb.com/apis/directory">programmableweb -sivustolta.</p> 
+
+    <p>Työllä voi osallistua <a href="http://www.databusiness.fi/fi/challenge/">databusiness.fi -kilpailuun</a>, jolloin kilpailun säännöt rajoittavat rajapintojen valintaa. Kilpailun <a href="http://www.databusiness.fi/fi/avoin-data/ideat/">ideapankkiin</a> kannattaa tutustua, vaikkei aikoisikaan osallistua itse kilpailuun. 
+
+    <p>Työn yleiset vaatimukset ovat:</p>
+    <ul>
+    <li>Rajapintasovelluksen täytyy hyödyntää vähintään kahta eri julkisen rajapinnan (API) kautta tarjolla olevaa datalähdettä uudenlaisen ja yksittäisiä datalähdettä rikkaamman tiedon tuottamiseen</li>
+        <li>Sovelluksen täytyy tarjota REST-rajapinta tuottamaansa tietoon</li>
+        <li>REST-rajapinta on dokumentoitava</li>
+        <li>Harjoituksissa autamme palvelun pystyttämisessä Googlen App Engine tai Heroku -ympäristöön, mutta muidenkin ympäristöjen käyttö on sallittua
+        <li>Omaa rajanpintaa täytyy hyödyntää jossakin client sovelluksessa</li>
+        <li>Prosessin dokumentointi ("oppimispäiväkirja"), lisätkää projektiinne weeklysnippets.md|html minminen tiedosto, jonne jokainen kirjaa viikon lopussa lyhyesti (muutama ranskalainen viiva riittää) mitä on tehnyt/oppinut ja mitä aikoo tehdä tulevalla viikolla.</li>
+    </ul>
+  
+    <p>Vapaaehtoisia, työn arvosteluun positiivisesti vaikuttavia ominaisuuksia ovat esim continuous integration ja devops-tyylinen automattinen deployment. Avoimen lähdekoodin projekteille löytyy ilmaisia <a href="https://github.com/ligurio/Continuous-Integration-services/blob/master/continuous-integration-services-list.md">CI palveluita</a></p>
+
+    <ul>
+        <li>14.11. (Julkisen) github projektin luominen, projektisuunnitelma Readme.md tiedostossa, käyttäjän "ihantola" kutsuminen projektiin ja projektityön tarkastamista pyytävän issuen osoittaminen hänelle</li>
+        <li>4.12. Työn palautus</li>
+        <li>5.-9.12. Oman työn esittely assistentille</li>
+    </ul>
+  
+    <h4>Docker harjoitus</h4>
+    
+    <p>Ville Valtonen Digialta pitää kaksi docker-aiheista harjoitussessiota, joissa tutustutaan mikropalveluarkkitehtuureiden toteuttamiseen. Toisella harjoituskerralla jatketaan siitä, mihin ensimmäisellä jäätiin. Harjoitustyön kuvaus löytyy <a href="http://palpo.github.io/slides/2016/digia-docker.pdf">Villen kalvoista</a>. Kalvot on kuitenkin tarkoitettu esityksen tueksi ja niiden tulkitseminen osallistumatta luennolle on varmasti haastavaa.</p>
+
+    <p>Harjoitustyö arvostellaan skaalalla 1-5. Ensimmäisellä harjoituskerralla läsnäolleet saavat harjoitustyöstä arvosanan 1. Villen kalvoissa harjoituksesta on kolme toistensa päälle rakentuvaa versiota: minimum viable product (arvosana 3), versio 2 (arvosana 4) ja versio 3 (arvosana 5). Docker -harjoitus on tarkoitus tehdä suurelta osin ohjatusti kahden vierailuluennon aikana (ja itsenäisesti näiden välissä). Tämän jälkeen on kuitenkin vielä reilu viikko aikaa viimeistellä työ loppuun. Työ pitää palauttaa viimeistään 30.11. lähettämällä sähköpostia osoitteeseen mikko.nurminen(at)tut.fi ja kertoen, mistä ryhmän repositorio löytyy. Tämän jälkeen sovitaan henkilökohtainen demoaika, milloin ryhmä käy esittelemässä työnsä Mikolle.</p>
+
+    <p>Kun olet päässyt harjoituksessa riittävän pitkälle, tarvitset ryhmäkohtaiset tunnukset virtuaalikoneelle. Saat tunnukset ottamalla yhteyttä kurssin luennoitsijaan slackissa tai sähköpostilla.</p>
+ 
+    <ul>
+        <li>Pe 11.11. klo 10-13 Ensimmäinen harjoitussessio (oma läppäri mukaan)</li>
+        <li>Ti 22.11. klo 12-14 Vapaaehtoinen harjoitussessio (voitte tehdä tehtäviä omaan tahtiin, assistentti on paikalla)</li>
+        <li>Pe 25.11. klo 10-12 Toinen harjoitussessio (oma läppäri mukaan)</li>
+        <li>Ti 29.11. klo 12-14 Vapaaehtoinen harjoitussessio (voitte tehdä tehtäviä omaan tahtiin, assistentti on paikalla)<li>
+        <li>Ke 30.11. klo 23:59 Projektin palautus
+    </ul>
+ 
+           
 
     <h2>Luennot</h2>
     <a name="slides"></a>
