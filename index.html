@@ -7,58 +7,22 @@ layout: default
     <h2>Kurssijärjestelyt</h2>
     <a name="course"></a>
 
-    <p>Kurssilla on kaksi pakollista osasuoritusta: tentti ja kaksi (pareittain) tehtävää harjoitustyötä toisella periodilla. Harjoitustöistä toisen suorittaminen riittää kurssin läpäisemiseksi. Lisäksi ensimmäisellä periodilla on henkilökohtaisia pienempiä tehtäviä (alkaen 12.9.), jotka vaikuttavat kurssin kokonaisarvosanaan positiivisesti. Kaikkien osasuoritusten on liityttävä samaan suorituskertaan - eli vanhoja tenttejä tai harjoituksia ei voi yhdistää osaksi vuoden 2016 kurssia. Luennot ovat ensimmäisellä periodilla keskiviikkoisin klo 14-16.
+    <p>Syksyn 2017 kurssi on yhden periodin intensiivikurssi syyslukukauden toisella puoliskolla. Luennot ovat joka torstai klo 14-16 luokassa TB109.</p> 
 
-    <p>Kurssin arvostellaan siten, että toisen periodin harjoitustöiden painoarvo on 50% (molemmat 25%), tentin 40%, yksilöllisten ensimmäisen periodin harjoitusten 10%</p>
+    <p>Kurssilla on kolme osasuoritusta: tentti (T), (pareittain tehtävä) projekti (P) ja henkilökohtaisia pienempiä tehtäviä luentoihin liittyen (L). Kaikkien osasuoritusten on liityttävä samaan suorituskertaan - eli vanhoja tenttejä tai harjoituksia ei voi yhdistää osaksi vuoden 2017 kurssia. Jokainen osasuoritus arvostellaan skaalalla 0-5. Tentin hyväksytty suorittaminen on pakollista, jonka kurssi arsovana määräytyy osasuoritysten keskiarvon perusteella.</p>
+
 
     <p>Kurssin vastuuopettajana toimii Petri Ihantola. Kurssin tiedotus tapahtuu näiden kotisivujen kautta. Lisäksi kurssilla on epävirallinen slack -ryhmä <a href="https://palpo.slack.com/x-77028117026-77011368902/signup">palpo.slack.com</a>, jossa opiskelijat voivat keskustella vapaasti. Kurssihenkilökunta ei kuitenkaan päivystä kanavalla. Kurssin assistenttina toimii Mikko Nurminen.</p>
 
     <h3>Harjoitustyöt</h3>
 
-    <h4>Oman REST-rajapinnan suunnittelu</h4>
-
-    <p>Oma aihe, jossa suunnittellaan palvelu, joka yhdistelee avointa dataa useammasta, kuin yhdestä julkisesta rajapinnasta, ja tarjoaa tietolähteitä yhdistelemällä tuotettuun dataan oman rajapintanta ja (yksinkertaisen) rajapintaa hyödyntävän esimerkkisovelluksen. Esimerkkejä avoimista rajapinnoista löytyy esim. <a href="http://apisuomi.fi/shop/">api-suomesta</a> ja <a href="http://www.programmableweb.com/apis/directory">programmableweb -sivustolta.</p> 
-
-    <p>Työllä voi osallistua <a href="http://www.databusiness.fi/fi/challenge/">databusiness.fi -kilpailuun</a>, jolloin kilpailun säännöt rajoittavat rajapintojen valintaa. Kilpailun <a href="http://www.databusiness.fi/fi/avoin-data/ideat/">ideapankkiin</a> kannattaa tutustua, vaikkei aikoisikaan osallistua itse kilpailuun. 
-
-    <p>Työn yleiset vaatimukset ovat:</p>
-    <ul>
-    <li>Rajapintasovelluksen täytyy hyödyntää vähintään kahta eri julkisen rajapinnan (API) kautta tarjolla olevaa datalähdettä uudenlaisen ja yksittäisiä datalähdettä rikkaamman tiedon tuottamiseen</li>
-        <li>Sovelluksen täytyy tarjota REST-rajapinta tuottamaansa tietoon</li>
-        <li>REST-rajapinta on dokumentoitava</li>
-        <li>Harjoituksissa autamme palvelun pystyttämisessä Googlen App Engine tai Heroku -ympäristöön, mutta muidenkin ympäristöjen käyttö on sallittua
-        <li>Omaa rajanpintaa täytyy hyödyntää jossakin client sovelluksessa</li>
-        <li>Prosessin dokumentointi ("oppimispäiväkirja"), lisätkää projektiinne weeklysnippets.md|html minminen tiedosto, jonne jokainen kirjaa viikon lopussa lyhyesti (muutama ranskalainen viiva riittää) mitä on tehnyt/oppinut ja mitä aikoo tehdä tulevalla viikolla.</li>
-    </ul>
-  
-    <p>Vapaaehtoisia, työn arvosteluun positiivisesti vaikuttavia ominaisuuksia ovat esim continuous integration ja devops-tyylinen automattinen deployment. Avoimen lähdekoodin projekteille löytyy ilmaisia <a href="https://github.com/ligurio/Continuous-Integration-services/blob/master/continuous-integration-services-list.md">CI palveluita</a></p>
-
-    <ul>
-        <li>14.11. (Julkisen) github projektin luominen, projektisuunnitelma Readme.md tiedostossa, käyttäjän "ihantola" kutsuminen projektiin ja projektityön tarkastamista pyytävän issuen osoittaminen hänelle</li>
-        <li>4.12. Työn palautus</li>
-        <li>5.-9.12. Oman työn esittely assistentille</li>
-    </ul>
-  
-    <h4>Docker harjoitus</h4>
-    
-    <p>Ville Valtonen Digialta pitää kaksi docker-aiheista harjoitussessiota, joissa tutustutaan mikropalveluarkkitehtuureiden toteuttamiseen. Toisella harjoituskerralla jatketaan siitä, mihin ensimmäisellä jäätiin. Harjoitustyön kuvaus löytyy <a href="http://palpo.github.io/slides/2016/digia-docker.pdf">Villen kalvoista</a>. Kalvot on kuitenkin tarkoitettu esityksen tueksi ja niiden tulkitseminen osallistumatta luennolle on varmasti haastavaa.</p>
-
-    <p>Harjoitustyö arvostellaan skaalalla 1-5. Ensimmäisellä harjoituskerralla läsnäolleet saavat harjoitustyöstä arvosanan 1. Villen kalvoissa harjoituksesta on kolme toistensa päälle rakentuvaa versiota: minimum viable product (arvosana 3), versio 2 (arvosana 4) ja versio 3 (arvosana 5). Docker -harjoitus on tarkoitus tehdä suurelta osin ohjatusti kahden vierailuluennon aikana (ja itsenäisesti näiden välissä). Tämän jälkeen on kuitenkin vielä reilu viikko aikaa viimeistellä työ loppuun. Työ pitää palauttaa viimeistään 30.11. lähettämällä sähköpostia osoitteeseen mikko.nurminen(at)tut.fi ja kertoen, mistä ryhmän repositorio löytyy. Tämän jälkeen sovitaan henkilökohtainen demoaika, milloin ryhmä käy esittelemässä työnsä Mikolle.</p>
-
-    <p>Kun olet päässyt harjoituksessa riittävän pitkälle, tarvitset ryhmäkohtaiset tunnukset virtuaalikoneelle. Saat tunnukset ottamalla yhteyttä kurssin luennoitsijaan slackissa tai sähköpostilla.</p>
- 
-    <ul>
-        <li>Pe 11.11. klo 10-13 (TB103) Ensimmäinen harjoitussessio (oma läppäri mukaan)</li>
-        <li>Ti 22.11. klo 12-14 (TC217) Vapaaehtoinen harjoitussessio (voitte tehdä tehtäviä omaan tahtiin, assistentti on paikalla)</li>
-        <li>Pe 25.11. klo 10-12 (TB103) Toinen harjoitussessio (oma läppäri mukaan)</li>
-        <li>Ti 29.11. klo 12-14 (TC217) Vapaaehtoinen harjoitussessio (voitte tehdä tehtäviä omaan tahtiin, assistentti on paikalla)</li>
-        <li>Ke 30.11. klo 23:59 Projektin palautus
-    </ul>
- 
+    <h4>TODO/h4>
            
 
     <h2>Luennot</h2>
     <a name="slides"></a>
+
+    <p>Kurssin alustava opetussuunnitelma on alla. Ensimmäinen luento 26.10. on perinteinen luentomainen opetustapahtuma. Seuraavat "luennot" ovat <a href="https://fi.wikipedia.org/wiki/K%C3%A4%C3%A4nteinen_opetus">äänteinen luokkahuone</a> ajattelun mukaisia keskustelutilaisuuksia, joihin valmistava materiaali (ja mahdolliset harjoitukset) jaetaan luentoa edeltävänä maanantaina. Opetustapahtumat eivät välttämättä kestää kahta tuntia, vaan ainoastaan aiheeseen liittyvän keskustelun vaatiman ajan.</p>
 
       <div class="row">
       <div class="col-md-offset-2 col-md-8 col-sm-12 top-margin" >
@@ -71,160 +35,114 @@ layout: default
             </li>
 
             <li class="time-label">
-              <span>Viikko 36
+              <span>Viikko 43
               </span>
             </li>
 
             <li>
               <i class="fa fa-envelope bg-black"></i>
               <div class="timeline-item">
-                <span class="time"><i class="fa fa-clock-o"></i>Keskiviikko 31.8.2016</span>
-                <h3 class="timeline-header">Kurssin esittely</h3>
-                <div class="timeline-body">
-                  Kurssijärjestelyt ja johdatus kurssin aihepiireihin
-                </div>
-                <div class='timeline-footer'>
-                  <a class="btn btn-primary btn-xs" href="https://docs.google.com/presentation/d/17A1S0iHocXoqchu2rEAqPDXrFk3crOIhYjr8dC8WKyg/edit?usp=sharing">Johdanto ja taustaa</a>
-                </div>
+                <span class="time"><i class="fa fa-clock-o"></i>Torstai 26.10.2017</span>
+                  <h3 class="timeline-header">Pilvipalvelut ja virtualisointi</h3>
+                  <div class="timeline-body">
+                  <p>Mieti vastauksia ainakin seuraaviin kysymyksiin: Mitä virtualisoinnilla tarkoitetaan ja mitä etuja sillä saavutetaan? Mitä IaaS, PaaS ja SaaS tarkoittavat ja miten nämä käsitteet suhtautuvat toisiinsa? Mitä BaaS tarkoittaa. Myöghemmin kurssilla kannattaa miettiä em. käsitteiden suhdetta mikropalveluihin </p>
+                  </div>
+
+                  <div class='timeline-footer'>
+                    <a class="btn btn-primary btn-xs" href="./slides/2016/cloud.pdf">Pilveä</a>
+                    <a class="btn btn-primary btn-xs" href="./slides/2016/xaas.pdf">XaaS</a>
+                    <a class="btn btn-primary btn-xs" href="./slides/2016/virtualization.pdf">Virtualisointi</a>
+                  </div>
               </div>
+
             </li>
 
             <li class="time-label">
-              <span>Viikko 36
+              <span>Viikko 44
               </span>
             </li>
-
             <li>
               <i class="fa fa-envelope bg-black"></i>
               <div class="timeline-item">
-                <span class="time"><i class="fa fa-clock-o"></i>Keskiviikko 31.8.2016</span>
-                <h3 class="timeline-header">Palveluiden suunnitelun periaatteita</h3>
+                <span class="time"><i class="fa fa-clock-o"></i>Torstai 2.11.2016</span>
+                <h3 class="timeline-header">Docker hands-on</h3>
                 <div class="timeline-body">
-                  Palveluiden ja palveluorientuneiden järjestelmien suunnitelun periaatteita ja pilvipalvelujen yhteydessä usein hyödyllisiä käytäntöjä.
+                
                 </div>
                 <div class='timeline-footer'>
-                  <a class="btn btn-primary btn-xs" href="./slides/2016/servicedesign.pdf">Palveluiden suunnittelu</a>
-                  <a class="btn btn-primary btn-xs" href="./slides/2016/soadesign.pdf">SOA suunnittelu</a>
-                  <a class="btn btn-primary btn-xs" href="./slides/2016/cloudbestpractices.pdf">Hyvät käytännöt</a>
+
                 </div>
               </div>
             </li>
 
             <li class="time-label">
-              <span>Viikko 39</span>
-            </li>
-
-            <li>
-              <i class="fa fa-envelope bg-black"></i>
-              <div class="timeline-item">
-                <span class="time"><i class="fa fa-clock-o"></i>Keskiviikko 28.9.2016</span>
-                <h3 class="timeline-header">REST vs. WS</h3>
-                <div class="timeline-body">
-                  REST ja Web Services lähestymistapojen vertailu
-                </div>
-                <div class='timeline-footer'>
-                  <a class="btn btn-primary btn-xs" href="./slides/2016/webservices.pdf">Web Services</a>
-                  <a class="btn btn-primary btn-xs" href="./slides/2016/restvsws.pdf">REST vs. WS</a>
-                  <a class="btn btn-primary btn-xs" href="./slides/2016/implws.pdf">WS rajapintojen suunnittelu ja toteutus</a>
-                  <a class="btn btn-danger btn-xs" href="https://github.com/Palpo/ws-tervehdys">Käytännön esimerkki</a>
-                  <p>Muiden oppilaiden lisäämiä lukuvinkkejä:</p>
-                  <ul>
-                    <li>
-                      <a href="https://thrift.apache.org/">
-                        Pohdi miten Apache Thriftin servicen määrittelykieli (SDL) suhtautuu WSDL/SOA:an.
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <i class="fa fa-envelope bg-black"></i>
-              <div class="timeline-item">
-                <span class="time"><i class="fa fa-clock-o"></i>Torstai 29.9.2016 (TB222)</span>
-                <h3 class="timeline-header">REST ja HATEOAS</h3>
-                <div class="timeline-body">
-                  Valmistaudu luennolle etsimällä vastaukset seuraaviin kysymyksiin: Mitä HATEOAS tarkoittaa ja miten sitä käytetään? Millaisia standardeja hypermedian esittämiseen liittyy ja miten ne suhtautuvat toisiinsa (esim HAL)? Voit käyttää apuna esim. seuraavia artikkeleita. Mikäli sinulla on mielessäsi artikkeli, jota suosittelet muillekin, niin tee pull request <a href="https://github.com/Palpo/palpo.github.io">kurssin kotisivuihin.</a> Sivun sisältö löytyy tiedostosta index.html.
-                  <p>Valmistautumiseen menee arviolta 2-3 tuntia.</p>
-                </div>
-
-                <div class='timeline-footer'>
-                  <ul>
-                    <li><a href="https://www.infoq.com/articles/webber-rest-workflow">How to GET a Cup of Coffee</a></li>
-                    <li><a href="http://blogs.mulesoft.com/dev/api-dev/api-best-practices-hypermedia-part-1/">API Best Practices: Hypermedia</a> (lue koko sarja, äläkä vain part-1 -osaa). Huomaa, että artikkelisarjan otsikoinnissa on virhe ja osaa 4 ei ole olemassa.</li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-
-            <li class="time-label">
-              <span>Viikko 40</span>
-            </li>
-
-            <li>
-              <i class="fa fa-envelope bg-black"></i>
-              <div class="timeline-item">
-                <span class="time"><i class="fa fa-clock-o"></i>Keskiviikko 5.10.2016 (TB223)</span>
-                <h3 class="timeline-header">REST rajapintojen kuvauskielet</h3>
-                <div class="timeline-body">
-                  <p>Valmistaudu opetustilaisuuteen selvittämällä millaisia REST rajapintojen kuvauskieliä on olemassa ja vertailemalla näitä keskenään. Voit aloittaa tutustumisen alla olevan wikipedia artikkelin avulla. Jälleen, mikäli sinulla on mielessäsi artikkeli, jota suosittelet muillekin, niin lisää se alla olevaan listaan ja tee pull request.</p>
-                  <p>Valmistautumiseen menee arviolta 2-3 tuntia.</p>
-                </div>
-
-                <div class='timeline-footer'>
-                  <ul>
-                    <li><a href="https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages">Overview of RESTful API Description Languages</a></li>
-					<li><a href="http://modeling-languages.com/modeling-web-api-comparing/">Modeling Web APIs: your best choices</a> (sisältää kivan vertailutaulukon)</li>
-
-                  </ul>
-                </div>
-              </div>
-            </li>
-
-
-
-            <li class="time-label">
-              <span>Viikko 41
+              <span>Viikko 45
               </span>
             </li>
-
             <li>
               <i class="fa fa-envelope bg-black"></i>
               <div class="timeline-item">
-                <span class="time"><i class="fa fa-clock-o"></i>Keskiviikko 12.10.2016 (TB223)</span>
-                <h3 class="timeline-header">Mikropalveluarkkitehtuurit</h3>
+                <span class="time"><i class="fa fa-clock-o"></i>Torstai 9.11.2016</span>
+                <h3 class="timeline-header">Palveluioden suunnittelun periaatteita</h3>
                 <div class="timeline-body">
-                  <p>Valmistaudu opetustilaisuuteen tutustumalla mikropalveluarkkitehtuuriin (eng. microservices). Mitä tällä tarkoitetaan, mitä etuja sillä saavutetaan ja mitä haasteita lähestymistapaan liittyy? </p>
-                  <p>Valmistautumiseen menee arviolta 2-3 tuntia.</p>
+                Vikasietoisen kokonaisuuden suunnittelusta, orkestraatio vs. koreografiat... 
                 </div>
-
                 <div class='timeline-footer'>
-                  <ul>
-                    <li><a href="http://www.martinfowler.com/articles/microservices.html">Microservices</a></li>
-                    <li><a href="http://martinfowler.com/articles/microservice-trade-offs.html">Microservice Trade-Offs</a></li>
-                    <li><a href="http://www.tivi.fi/Kaikki_uutiset/mikropalvelut-korvaavat-it-mohkaleet-6588283">Mikropalvelut korvaavat IT-möhkäleet</a></li>
-					<li><a href="https://circleci.com/blog/its-the-future/">It's the future</a> (hauskasti kirjoitettu juttu mikropalveluista ja tilanteesta, jossa niitä ei ehkä kuitenkaan tarvita)</li>
-                    <li><a href="http://microservices.io/">Microservices architecture</a></li>  
-		</ul>
+
                 </div>
               </div>
             </li>
 
-
+            <li class="time-label">
+              <span>Viikko 46
+              </span>
+            </li>
             <li>
               <i class="fa fa-envelope bg-black"></i>
               <div class="timeline-item">
-                <span class="time"><i class="fa fa-clock-o"></i>Torstai 13.10.2016 Klo 10:15 (TB224)</span>
-                <h3 class="timeline-header">Virtualisointi ja pilvipalvelut</h3>
+                <span class="time"><i class="fa fa-clock-o"></i>Torstai 16.11.2016</span>
+                <h3 class="timeline-header">Rest, Hateoas ja rajapintojen kuvauskielet</h3>
                 <div class="timeline-body">
-                  <p>Valmistaudu opetustilaisuuteen tutustumalla pilvipalveluihin ja virtualisointiin alla olevien linkkien avulla. Myös muita materiaaleja saa käyttää ja näitä voi myös jakaa muille opiskelijoille, kuten aikaisemminkin. Mieti vastauksia ainakin seuraaviin kysymyksiin: Mitä virtualisoinnilla tarkoitetaan ja mitä etuja sillä saavutetaan? Mitä IaaS, PaaS ja SaaS tarkoittavat ja miten nämä käsitteet suhtautuvat toisiinsa? Mitä BaaS tarkoittaa ja miten se voi ajatella liittyvän mikropalveluihin? Valmistautumiseen menee arviolta 2-3 tuntia. </p>
+                
                 </div>
-
                 <div class='timeline-footer'>
-                  <a class="btn btn-primary btn-xs" href="./slides/2016/cloud.pdf">Pilveä</a>
-                  <a class="btn btn-primary btn-xs" href="./slides/2016/xaas.pdf">XaaS</a>
-                  <a class="btn btn-primary btn-xs" href="./slides/2016/virtualization.pdf">Virtualisointi</a>
+
+                </div>
+              </div>
+            </li>
+
+            <li class="time-label">
+              <span>Viikko 47
+              </span>
+            </li>
+            <li>
+              <i class="fa fa-envelope bg-black"></i>
+              <div class="timeline-item">
+                <span class="time"><i class="fa fa-clock-o"></i>Torstai 23.11.2016</span>
+                <h3 class="timeline-header">GraphQL ja muita vaihtoehtoja</h3>
+                <div class="timeline-body">
+                
+                </div>
+                <div class='timeline-footer'>
+
+                </div>
+              </div>
+            </li>
+
+            <li class="time-label">
+              <span>Viikko 48
+              </span>
+            </li>
+            <li>
+              <i class="fa fa-envelope bg-black"></i>
+              <div class="timeline-item">
+                <span class="time"><i class="fa fa-clock-o"></i>Torstai 30.11.2016</span>
+                <h3 class="timeline-header">Mikropalveluarkkitehtuuri</h3>
+                <div class="timeline-body">
+                
+                </div>
+                <div class='timeline-footer'>
+
                 </div>
               </div>
             </li>
